@@ -1,3 +1,4 @@
+import random
 
 questions = {
     "sweet": "Do ye like your drinks sweet?",
@@ -20,7 +21,7 @@ def get_drink():
     value = False 
     customer_preference = {}
     for option in questions:
-                preference = input(questions[option] + 'y = yes + n = no : ')
+                preference = input(questions[option]+ 'y = yes + n = no : ')
                 if preference == 'y':
                     value = True 
                 else:
@@ -28,26 +29,22 @@ def get_drink():
                     
                 customer_preference.update({option:value})  
     return customer_preference 
+
+    
+def create_drinks(customer_preference):
+    drinks = []
+    for stuff in customer_preference:
+              if customer_preference[stuff] == True:
+                  ingredient = random.choice(ingredients[stuff])
+                  drinks.append(ingredient)
+    return drinks
+ 
+                 
 if __name__ == '__main__':
-    print("preference")
-    
-def drinks(customer_preference, drink = ()):
-    
-    import random 
-    ingredients = {"sweet","sour","strong","salty","spicy"}
-    
-    print(random.choice(ingredients))
-    return drinks 
-if __name__ == '__main__':
-    print(ingredients)
-    
-    
-    
-    
-    
-    
-    
-    
+    choice = get_drink()
+    print(choice)
+    customer_drink = create_drinks(customer_preference)
+    print(customer_drink)
     
     
     
