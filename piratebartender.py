@@ -43,9 +43,8 @@ def create_drinks(customer_preference):
 if __name__ == '__main__':
     choice = get_drink()
     print(choice)
-    customer_drink = create_drinks(customer_preference)
+    customer_drink = create_drinks(choice)
     print(customer_drink)
-    
     
     
     
