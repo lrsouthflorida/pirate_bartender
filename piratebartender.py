@@ -29,7 +29,6 @@ def get_drink():
                     
                 customer_preference.update({option:value})  
     return customer_preference 
-
     
 def create_drinks(customer_preference):
     drinks = []
@@ -45,8 +44,6 @@ if __name__ == '__main__':
     print(choice)
     customer_drink = create_drinks(choice)
     print(customer_drink)
-    
-    
     
     
     
