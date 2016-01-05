@@ -37,13 +37,19 @@ def create_drinks(customer_preference):
                   ingredient = random.choice(ingredients[stuff])
                   drinks.append(ingredient)
     return drinks
+    
+
+
+                   
  
-                 
 if __name__ == '__main__':
     choice = get_drink()
     print(choice)
     customer_drink = create_drinks(choice)
     print(customer_drink)
+    
+    cocktail_name =["Killer Mountain", "Wild Dog", "Spiced Snake", "Twisting Lotus", "Tornado Punch"]
+    print(random.choice(cocktail_name))
     
     
     
