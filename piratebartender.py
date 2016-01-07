@@ -47,14 +47,16 @@ if __name__ == '__main__':
     customer_drink = create_drinks(choice)
     print(customer_drink)
     
+    cocktail_name =["Killer Mountain", "Wild Dog", "Spiced Snake", "Twisting Lotus", "Tornado Punch"]
+    print(random.choice(cocktail_name))
+    
     while True: 
      more_drinks = input("Do you want another drink? + 'y = yes + n = no : '")
      if more_drinks == 'y':
-         print(get_drink())
+         print(get_drink()) 
+         print(random.choice(cocktail_name))
      else:
          break
-    
-    
     
 
     
